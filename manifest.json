@@ -1,0 +1,14 @@
+{
+    "name": "Radar Navigator",
+    "id": "com.myorg.radar",
+    "version": "1.0.0",
+    "description": "Finds a specific target from a CSV file.",
+    "author": "Rana",
+    "parameters": [
+        {
+            "name": "target_id",
+            "description": "The ID of the respondent to find",
+            "required": true
+        }
+    ]
+}

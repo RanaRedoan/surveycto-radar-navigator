@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 20px; background: #222; color: white; }
+        
+        /* The Compass Arrow */
+        #arrow {
+            font-size: 100px;
+            margin: 20px auto;
+            display: inline-block;
+            transition: transform 0.5s ease; /* Smooth rotation */
+            text-shadow: 0 0 10px #0f0;
+        }
+        
+        /* Information Text */
+        #distance { font-size: 40px; font-weight: bold; margin-bottom: 5px; color: #00ff00; }
+        #target-name { font-size: 20px; color: #aaa; margin-bottom: 30px; }
+        
+        /* The "Solve the Pond" Button */
+        .btn-route {
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .btn-refresh {
+            background: #444;
+            margin-top: 10px;
+            font-size: 14px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="target-name">Loading Target...</div>
+    
+    <div id="arrow">⬆</div>
+    
+    <div id="distance">-- m</div>
+    <div>Distance to Target</div>
+
+    <button class="btn-route" onclick="openGoogleMaps()">🗺️ Show Walking Route</button>
+    <button class="btn-route btn-refresh" onclick="getLocation()">↻ Refresh Location</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
